@@ -1,10 +1,15 @@
 {
-  "name": "landing-page",
+  "name": "blocship-landing-page",
   "version": "0.1.0",
+  "homepage": "http://blocship.io",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
+    "predeploy": "npm run build && npm run export && touch ./out/.nojekyll",
+    "deploy": "npm run custom-domain && node scripts/pages.js blocship main",
+    "custom-domain": "node scripts/cname.js blocship.io www.blocship.io",
     "start": "next start",
     "lint": "next lint"
   },
@@ -14,7 +19,10 @@
     "eslint-config-next": "13.3.0",
     "next": "13.3.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0",
     "sass": "^1.62.0"
   }
 }
