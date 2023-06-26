@@ -10,7 +10,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>We Create Flutter Centric Mobile Apps That Engage & Convert Users.</h1>
+        <h1 className="text-3xl font-bold underline">
+          We Create Flutter Centric Mobile Apps That Engage & Convert Users.
+        </h1>
       </main>
     </div>
   )
