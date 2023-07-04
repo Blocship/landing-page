@@ -9,13 +9,18 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      primary: "#011643",
-      secondary: "#F9A920",
-      'matt-black': "#19303D",
-      'light-gradient': '#2BB7F6',
-      'dark-gradient': '#04599C',
-    },
+    extend: {
+      fontSize: {
+        '5xl': '3.125rem',
+      },
+      colors: {
+        primary: "#011643",
+        secondary: "#F9A920",
+        'matt-black': "#19303D",
+        'light-gradient': '#2BB7F6',
+        'dark-gradient': '#04599C',
+      },
+    }
   },
   plugins: [],
 }
