@@ -17,7 +17,7 @@ export default function Home() {
           We Create Flutter Centric Mobile Apps That Engage & Convert Users.
         </h1>
         <div className='flex flex-col gap-4 justify-center mt-12'>
-          <SubHeading className='text-center'>Sub Heading</SubHeading>
+          <SubHeading>What We Offer</SubHeading>
           <SectionHeading className='text-center'>Section heading</SectionHeading>
           <div className='flex gap-4 justify-center'>
             <div className='w-12 h-12 bg-primary'></div>
