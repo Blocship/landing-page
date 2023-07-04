@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Image from 'next/image'
+import HeroBlock from '../public/hero-block.svg'
 import SectionHeading from '../components/headings/SectionHeading'
 import SubHeading from '../components/headings/SubHeading'
 import HeroHeading from '../components/headings/HeroHeading'
@@ -15,7 +17,7 @@ export default function Home() {
 
       <main>
         <HeroHeading>
-          We <strong>Flutter Centric</strong> Mobile Apps That Engage & Convert Users.
+          We <Image className='inline w-[34px] md:w-[42px] lg:w-[54px]' src={HeroBlock} alt="build" /> <strong>Flutter Centric</strong> Mobile Apps That Engage & Convert Users.
         </HeroHeading>
         <div className='flex flex-col gap-4 justify-center mt-12'>
           <SubHeading>What We Offer</SubHeading>
