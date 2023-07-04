@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import SectionHeading from '../components/headings/SectionHeading'
 import SubHeading from '../components/headings/SubHeading'
+import HeroHeading from '../components/headings/HeroHeading'
 
 export default function Home() {
   return (
@@ -13,9 +14,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="text-3xl font-bold underline">
-          We Create Flutter Centric Mobile Apps That Engage & Convert Users.
-        </h1>
+        <HeroHeading>
+          We <strong>Flutter Centric</strong> Mobile Apps That Engage & Convert Users.
+        </HeroHeading>
         <div className='flex flex-col gap-4 justify-center mt-12'>
           <SubHeading>What We Offer</SubHeading>
           <SectionHeading className='text-center'>Section heading</SectionHeading>

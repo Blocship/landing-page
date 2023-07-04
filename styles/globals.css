@@ -9,10 +9,9 @@ body {
 @layer components {
   .subheading {
     @apply relative;
-    
-    &::after {
-      @apply absolute content-[''] bg-secondary/40 left-0 bottom-0 -z-10 w-full h-1/2
-    }
+  }
+  .subheading::after {
+    @apply absolute content-[''] bg-secondary/40 left-0 bottom-0 -z-10 w-full h-1/2
   }
 }
 
