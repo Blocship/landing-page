@@ -20,36 +20,42 @@ export default function AppDevelopmentProcess() {
         </SectionText>
       </div>
       
-      {
-        [
-          {
-            id: 0,
-            title: `Planning and concept development`,
-            content: `This stage involves defining the app's goals, target audience, and features`,
-            imagePath: `/planning.webp`
-          },
-          {
-            id: 1,
-            title: `Design and development`,
-            content: `In this stage, the app's user interface and functionality are created and tested`,
-            imagePath: `/design.webp`
-          },
-          {
-            id: 2,
-            title: `Testing and debugging`,
-            content: `Before the app is released, it is thoroughly tested to ensure that it is stable and free of errors`,
-            imagePath: `/testing.webp`
-          },
-          {
-            id: 3,
-            title: `Deployment`,
-            content: `Once the app is built, it is released and made available for users to download. Ongoing maintenance is also important to fix any bugs and add new features`,
-            imagePath: `/deployment.webp`
-          }
-        ].map(({id, title, content, imagePath}) => {
-          return <Block key={id} title={title} content={content} imagePath={imagePath} />;
-        })
-      }
+      <div className='mt-[80px] lg:mt-[100px] grid md:grid-cols-4 md:grid-rows-5 justify-center gap-[70px]'>
+        {
+          [
+            {
+              id: 0,
+              title: `Planning and concept development`,
+              content: `This stage involves defining the app's goals, target audience, and features`,
+              imagePath: `/planning.webp`,
+              cssClass: `md:row-start-1 md:col-start-1`
+            },
+            {
+              id: 1,
+              title: `Design and development`,
+              content: `In this stage, the app's user interface and functionality are created and tested`,
+              imagePath: `/design.webp`,
+              cssClass: `md:row-start-2 md:col-start-2`
+            },
+            {
+              id: 2,
+              title: `Testing and debugging`,
+              content: `Before the app is released, it is thoroughly tested to ensure that it is stable and free of errors`,
+              imagePath: `/testing.webp`,
+              cssClass: `md:row-start-3 md:col-start-3`
+            },
+            {
+              id: 3,
+              title: `Deployment`,
+              content: `Once the app is built, it is released and made available for users to download. Ongoing maintenance is also important to fix any bugs and add new features`,
+              imagePath: `/deployment.webp`,
+              cssClass: `md:row-start-4 md:col-start-4`
+            }
+          ].map(({id, title, content, imagePath, cssClass}) => {
+            return <Block key={id} id={id} cssClass={cssClass} title={title} content={content} imagePath={imagePath} />;
+          })
+        }
+      </div>
       
     </div>
   )

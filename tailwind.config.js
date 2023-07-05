@@ -8,6 +8,12 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    'row-start-0',
+    'row-start-1',
+    'row-start-2',
+    'row-start-3'
+  ],
   theme: {
     extend: {
       fontSize: {
