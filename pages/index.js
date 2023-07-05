@@ -1,10 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import HeroBlock from '../public/hero-block.svg'
-import SectionHeading from '../components/headings/SectionHeading'
-import SubHeading from '../components/headings/SubHeading'
 import HeroHeading from '../components/headings/HeroHeading'
-import SectionText from '../components/text/SectionText'
 import AppDevelopmentProcess from '../components/sections/AppDevelopmentProcess'
 
 export default function Home() {
