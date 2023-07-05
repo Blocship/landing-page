@@ -7,7 +7,7 @@ import Block from './AppDevelopmentProcess/Block'
 
 export default function AppDevelopmentProcess() {
   return (
-    <div className='max-w-[1100px] mx-auto py-[150px]'>
+    <div className='max-w-[1100px] mx-auto py-[150px] px-6'>
       <SubHeading className='mb-4 md:mb-6 lg:mb-[30px]'>Our App Development Process</SubHeading>
       <div className='flex flex-col gap-5'>
         <SectionHeading className='text-center'>Better & Great Experience</SectionHeading>
