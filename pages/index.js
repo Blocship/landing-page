@@ -1,8 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import HeroBlock from '../public/hero-block.svg'
-import HeroHeading from '../components/headings/HeroHeading'
 import AppDevelopmentProcess from '../components/sections/AppDevelopmentProcess'
+import HeroArea from '../components/sections/HeroArea'
 
 export default function Home() {
   return (
@@ -21,11 +19,8 @@ export default function Home() {
           <div className='w-12 h-12 bg-matt-black'></div>
           <div className='w-12 h-12 bg-gradient-to-br from-light-gradient/50 to-dark-gradient'></div>
         </div>
-        
-        <HeroHeading className='mt-12'>
-          We <Image className='inline w-[34px] md:w-[42px] lg:w-[54px]' src={HeroBlock} alt="build" /> <strong>Flutter Centric</strong> Mobile Apps That Engage & Convert Users.
-        </HeroHeading>
-        
+
+        <HeroArea/>
         <AppDevelopmentProcess/>
       </main>
     </div>
