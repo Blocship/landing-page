@@ -8,7 +8,7 @@ import Image from 'next/image'
 
 export default function HeroArea() {
   return (
-    <div className='flex flex-col gap-24 px-5'>
+    <div id='hero-area' className='flex flex-col gap-24 px-5 bg-opacity-10 bg-gradient-to-t from-light-gradient/5 to-dark-gradient/5'>
       <div className='flex flex-col items-center gap-10 lg:gap-8'>
         <div className='flex flex-col gap-4 md:gap-6 lg:gap-5'>
           <HeroHeading className='mt-12'>
@@ -26,11 +26,11 @@ export default function HeroArea() {
       </div>
       
       <div className='flex items-start lg:gap-24 w-full lg:w-auto mx-auto max-w-[840px] justify-between'>
-        <div className='px-2 lg:p-5 mt-[92px] md:mt-[150px] lg:mt-32'>
+        <div id='flutter-icon' className='px-2 lg:p-5 mt-[92px] md:mt-[150px] lg:mt-32'>
           <Image className='w-[89px] md:w-[158px] lg:w-[131px]'  src={FlutterIcon} alt="flutter" />
         </div>
         <Image className='w-[208px] md:w-[350px] lg:w-[300px]' src={HeroPhone} alt="mobile application" />
-        <div className='px-2 lg:p-5 mt-[92px] md:mt-[150px] lg:mt-32'>
+        <div id='dart-icon' className='px-2 lg:p-5 mt-[92px] md:mt-[150px] lg:mt-32'>
           <Image className='flex-shrink-0 w-[89px] md:w-[158px] lg:w-[131px]' src={DartIcon} alt="dart" />
         </div>
       </div>

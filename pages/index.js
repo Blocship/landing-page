@@ -12,13 +12,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='py-5'>
-        <div className='flex gap-4 justify-center'>
+      <main>
+        {/* <div className='flex gap-4 justify-center'>
           <div className='w-12 h-12 bg-primary'></div>
           <div className='w-12 h-12 bg-secondary'></div>
           <div className='w-12 h-12 bg-matt-black'></div>
           <div className='w-12 h-12 bg-gradient-to-br from-light-gradient/50 to-dark-gradient'></div>
-        </div>
+        </div> */}
 
         <HeroArea/>
         <AppDevelopmentProcess/>
