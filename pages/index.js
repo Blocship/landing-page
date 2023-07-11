@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import AppDevelopmentProcess from '../components/sections/AppDevelopmentProcess'
 import HeroArea from '../components/sections/HeroArea'
+import DevelopmentBlock from '../components/sections/DevelopmentBlock'
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         </div> */}
 
         <HeroArea/>
+        <DevelopmentBlock/>
         <AppDevelopmentProcess/>
       </main>
     </div>
