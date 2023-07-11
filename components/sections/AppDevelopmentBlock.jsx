@@ -9,7 +9,7 @@ import FeaturesBlock from './DevelopmentBlock/FeaturesBlock'
 import AppMockup from '../../public/application-mockup.webp'
 import LetsDiscuss from './DevelopmentBlock/LetsDiscuss'
 
-export default function DevelopmentBlock() {
+export default function AppDevelopmentBlock() {
   return (
     <div className='px-6 md:px-10 max-w-[1212px] mx-auto flex flex-col gap-20 lg:gap-40'>
       
