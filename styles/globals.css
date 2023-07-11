@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-matt-black
+}
+
+@layer components {
+  .subheading {
+    @apply relative;
+  }
+  .subheading::after {
+    @apply absolute content-[''] bg-secondary/40 left-0 bottom-0 -z-10 w-full h-1/2
+  }
+}
+
+#hero-area {
+  position: relative;
+}
+
+#hero-area::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  z-index: 20;
+  clip-path: ellipse(50% 100% at 50% 100%);
+  @apply h-1/5 md:h-1/4
+}
+
+#flutter-icon,
+#dart-icon {
+  filter: drop-shadow(0 0 8rem #2BB7F6);
+}
+
