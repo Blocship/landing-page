@@ -12,8 +12,8 @@ export default function WebDevelopmentBlock() {
       
       <div className='grid items-center gap-14 md:grid-cols-3 md:gap-[62px] lg:gap-[100px]'>
         
-        <div className='grid items-center justify-center w-full h-full relative'>
-          <Image className='absolute right-0 top-0' src={WebMockup} alt="application mockup" />
+        <div className='grid items-center justify-center w-full h-[390px] md:h-full relative'>
+          <Image className='absolute right-0 top-0 h-full w-auto max-w-none -mx-6 md:mx-auto' src={WebMockup} alt="application mockup" />
         </div>
         
         <div className='flex flex-col gap-8 lg:gap-[50px] md:col-span-2'>
