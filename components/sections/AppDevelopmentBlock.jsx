@@ -11,7 +11,7 @@ import LetsDiscuss from './DevelopmentBlock/LetsDiscuss'
 
 export default function AppDevelopmentBlock() {
   return (
-    <div className='px-6 md:px-10 max-w-[1212px] mx-auto flex flex-col gap-20 lg:gap-40'>
+    <div className='px-6 md:px-10 max-w-[1212px] mx-auto flex flex-col gap-20 lg:gap-40 py-[50px] md:py-[25px] lg:py-[50px]'>
       
       <div>
         <SubHeading className='mb-4 md:mb-6 lg:mb-[30px]'>What We Offer</SubHeading>
@@ -39,14 +39,16 @@ export default function AppDevelopmentBlock() {
             </p>
           </div>
           
-          <FeaturesBlock/>
+          <FeaturesBlock cta='Let discuss your app idea!' />
         </div>
         
         <div className='grid items-center justify-center w-full h-full'>
           <Image className='w-[268px] md:w-[220px] lg:w-[350px]' src={AppMockup} alt="application mockup" />
         </div>
         
-        <LetsDiscuss className={'md:hidden place-self-center'}/>
+        <LetsDiscuss className={'md:hidden place-self-center'}>
+          Let discuss your app idea!
+        </LetsDiscuss>
       </div>
     </div>
   )

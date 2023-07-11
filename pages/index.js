@@ -2,6 +2,7 @@ import Head from 'next/head'
 import AppDevelopmentProcess from '../components/sections/AppDevelopmentProcess'
 import HeroArea from '../components/sections/HeroArea'
 import AppDevelopmentBlock from '../components/sections/AppDevelopmentBlock'
+import WebDevelopmentBlock from '../components/sections/WebDevelopmentBlock'
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
 
         <HeroArea/>
         <AppDevelopmentBlock/>
+        <WebDevelopmentBlock/>
         <AppDevelopmentProcess/>
       </main>
     </div>
