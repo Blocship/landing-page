@@ -5,10 +5,14 @@ import FlutterIcon from '../../public/flutter-icon.webp';
 import DartIcon from '../../public/dart-icon.webp';
 import HeroPhone from '../../public/hero-phone.webp';
 import Image from 'next/image'
+import NavBar from './NavBar';
 
 export default function HeroArea() {
   return (
     <div id='hero-area' className='flex flex-col gap-24 px-5 bg-opacity-10 bg-gradient-to-t from-light-gradient/5 to-dark-gradient/5'>
+      
+      <NavBar/>
+      
       <div className='flex flex-col items-center gap-10 lg:gap-8'>
         <div className='flex flex-col gap-4 md:gap-6 lg:gap-5'>
           <HeroHeading className='mt-12'>
