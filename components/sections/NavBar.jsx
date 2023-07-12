@@ -14,7 +14,7 @@ export default function NavBar() {
         <>
           <div className="mx-auto max-w-[1212px] px-6 md:px-10 min-h-[100px] flex items-center w-full">
             <div className="relative flex h-16 justify-between w-full">
-              <div className="flex flex-1 items-center md:justify-center md:items-stretch md:justify-start">
+              <div className="flex flex-1 items-center md:items-stretch">
                 <div className="flex flex-shrink-0 items-center">
                   <Image
                     className="block w-[120px] md:w-[144px] h-auto"
