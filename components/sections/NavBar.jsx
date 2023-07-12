@@ -3,8 +3,12 @@ import { XMarkIcon, Bars2Icon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import Logo from '../../public/blocship-logo.svg'
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+function disableBodyScroll() {
+  document.body.style.overflowY = 'hidden'
+}
+
+function enableBodyScroll() {
+  document.body.style.overflowY = 'scroll'
 }
 
 export default function NavBar() {
@@ -64,17 +68,17 @@ export default function NavBar() {
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XMarkIcon className="block h-8 w-8" aria-hidden="true" />
+                    <XMarkIcon onClick={() => enableBodyScroll()} className="block h-8 w-8" aria-hidden="true" />
                   ) : (
-                    <Bars2Icon className="block h-8 w-8" aria-hidden="true" />
+                    <Bars2Icon onClick={() => disableBodyScroll()} className="block h-8 w-8" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
             </div>
           </div>
 
-          <Disclosure.Panel className="md:hidden">
-            <div className="space-y-1 pb-4 pt-2">
+          <Disclosure.Panel className="bg-white shadow-sm px-5 -mx-5 md:hidden">
+            <div className="pb-6">
               {
                 NAVIGATION.map(({id, title, link}) => {
                   return (
@@ -82,15 +86,19 @@ export default function NavBar() {
                       key={id}
                       as="a"
                       href={link}
-                      className="block py-2 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+                      className="block py-6 text-base font-medium "
                     >
                       {title}
                     </Disclosure.Button>
                   );
                 })
               }
+              <button className='rounded-full w-full border border-secondary text-secondary bg-secondary/10 px-[24px] py-[13px] text-md font-medium leading-none'>
+                Contact
+              </button>
             </div>
           </Disclosure.Panel>
+          <div className={`${open ? 'block' : 'hidden'} left-0 absolute h-full backdrop-blur-sm w-full z-10`}></div>
         </>
       )}
     </Disclosure>

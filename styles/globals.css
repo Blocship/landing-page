@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply text-matt-black
+  @apply text-matt-black overflow-x-hidden
 }
 
 @layer components {
