@@ -70,18 +70,18 @@ export default function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8">
+      <div className="mx-auto max-w-7xl px-6 pb-8 pt-[72px] md:pt-[100px] lg:px-8 lg:pt-[150px]">
+        <div className="md:grid md:grid-cols-3 md:gap-8">
+          <div className="space-y-8 flex flex-col justify-between md:h-5/6">
             <Image
               className="block w-[150px] md:w-[115px] lg:w-[170px] h-auto"
               src={Logo}
               alt="Blockship"
             />
-            <p className="text-sm leading-6 text-gray-600">
-              Making the world a better place through constructing elegant hierarchies.
+            <p className="text-base leading-6 text-[#1F1F1F]/50 md:hidden">
+              Transform your ideas into reality with our cutting-edge web and mobile solutions. Partner with us and experience seamless digital transformation like never before.
             </p>
-            <div className="flex space-x-6">
+            <div className="hidden md:flex space-x-6">
               {NAVIGATION.social.map((item) => (
                 <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
                   <span className="sr-only">{item.name}</span>
@@ -90,26 +90,26 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
+          <div className="mt-14 grid grid-cols-2 gap-8 md:col-span-2 md:mt-0">
+            <div className="md:grid md:grid-cols-2 md:gap-[100px]">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">Blocship Links</h3>
+                <h3 className="text-lg md:text-sm lg:text-base font-semibold leading-6 text-gray-900">Blocship Links</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {NAVIGATION.links.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                      <a href={item.href} className="text-base md:text-xs lg:text-sm leading-6 text-[#8A8F98] hover:text-gray-900">
                         {item.name}
                       </a>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">Business</h3>
+              <div className="mt-14 md:mt-0">
+                <h3 className="text-lg md:text-sm lg:text-base font-semibold leading-6 text-gray-900">Business</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {NAVIGATION.business.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                      <a href={item.href} className="text-base md:text-xs lg:text-sm leading-6 text-[#8A8F98] hover:text-gray-900">
                         {item.name}
                       </a>
                     </li>
@@ -129,6 +129,14 @@ export default function Footer() {
             <p>
               &copy; Copyright 2023 Blocship.io All rights reserved.
             </p>
+          </div>
+          <div className="flex space-x-6 md:hidden">
+            {NAVIGATION.social.map((item) => (
+              <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+                <span className="sr-only">{item.name}</span>
+                <item.icon className="h-6 w-6" aria-hidden="true" />
+              </a>
+            ))}
           </div>
           <p>
            <strong>UX</strong> Design & Crafted with ❤️ by <a href="#" className='underline'>Uxership</a>
