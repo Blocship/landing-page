@@ -12,7 +12,7 @@ export default function NavBar() {
     <Disclosure as="nav">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-[1212px] px-6 md:px-10 min-h-[100px] flex items-center w-full">
+          <div className="mx-auto max-w-[1212px] h-[72px] md:h-[100px] flex items-center w-full">
             <div className="relative flex h-16 justify-between w-full">
               <div className="flex flex-1 items-center md:items-stretch">
                 <div className="flex flex-shrink-0 items-center">
