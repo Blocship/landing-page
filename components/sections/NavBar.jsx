@@ -47,7 +47,7 @@ export default function NavBar() {
                   <Image
                     className="block w-[120px] md:w-[144px] h-auto"
                     src={Logo}
-                    alt="Your Company"
+                    alt="Blockship"
                   />
                 </div>
                 <div className="hidden md:mx-auto md:flex md:gap-[30px]">

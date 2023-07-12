@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '../../public/blocship-logo.svg'
+import BlocshipIcon from '../../public/blocship-icon.svg'
 import Image from 'next/image'
 
 const NAVIGATION = {
@@ -75,7 +76,7 @@ export default function Footer() {
             <Image
               className="block w-[150px] md:w-[115px] lg:w-[170px] h-auto"
               src={Logo}
-              alt="Your Company"
+              alt="Blockship"
             />
             <p className="text-sm leading-6 text-gray-600">
               Making the world a better place through constructing elegant hierarchies.
@@ -118,8 +119,20 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-gray-500">&copy; 2020 Your Company, Inc. All rights reserved.</p>
+        <div className="mt-24 md:mt-[52px] lg:mt-[70px] flex flex-col gap-8 items-center md:flex-row justify-between text-xs leading-none text-[#8B8B8B]">
+          <div className='flex items-center gap-1'>
+            <Image
+              className="inline"
+              src={BlocshipIcon}
+              alt="Blockship"
+            />
+            <p>
+              &copy; Copyright 2023 Blocship.io All rights reserved.
+            </p>
+          </div>
+          <p>
+           <strong>UX</strong> Design & Crafted with ❤️ by <a href="#" className='underline'>Uxership</a>
+          </p>
         </div>
       </div>
     </footer>
