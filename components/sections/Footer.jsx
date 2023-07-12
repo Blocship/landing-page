@@ -70,7 +70,7 @@ export default function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-[72px] md:pt-[100px] lg:px-8 lg:pt-[150px]">
+      <div className="px-6 md:px-10 max-w-[1212px] mx-auto pb-8 pt-[72px] md:pt-[100px] lg:pt-[150px]">
         <div className="md:grid md:grid-cols-3 md:gap-8">
           <div className="space-y-8 flex flex-col justify-between md:h-5/6">
             <Image
