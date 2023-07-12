@@ -1,5 +1,5 @@
 import { Disclosure } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { XMarkIcon, Bars2Icon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import Logo from '../../public/blocship-logo.svg'
 
@@ -36,7 +36,7 @@ export default function NavBar() {
     <Disclosure as="nav">
       {({ open }) => (
         <>
-          <div className="-mx-5 px-5 md:px-0 md:mx-auto w-screen md:w-full max-w-[1212px] h-[72px] md:h-[100px] flex items-center">
+          <div className="-mx-5 px-5 md:px-0 md:mx-auto w-screen md:w-full bg-white md:bg-transparent shadow-sm md:shadow-none max-w-[1212px] h-[72px] md:h-[100px] flex items-center">
             <div className="relative flex h-16 justify-between w-full">
               <div className="flex flex-1 items-center md:items-stretch" >
                 <div className="flex flex-shrink-0 items-center">
@@ -61,12 +61,12 @@ export default function NavBar() {
               </div>
               <div className="flex items-center md:hidden">
                 {/* Mobile menu button */}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                    <XMarkIcon className="block h-8 w-8" aria-hidden="true" />
                   ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                    <Bars2Icon className="block h-8 w-8" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
