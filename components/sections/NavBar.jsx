@@ -14,7 +14,7 @@ export default function NavBar() {
         <>
           <div className="mx-auto max-w-[1212px] px-6 md:px-10 min-h-[100px] flex items-center w-full">
             <div className="relative flex h-16 justify-between w-full">
-              <div className="flex flex-1 items-center md:justify-center sm:items-stretch sm:justify-start">
+              <div className="flex flex-1 items-center md:justify-center md:items-stretch md:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <Image
                     className="block w-[120px] md:w-[144px] h-auto"
@@ -22,7 +22,7 @@ export default function NavBar() {
                     alt="Your Company"
                   />
                 </div>
-                <div className="hidden sm:mx-auto sm:flex sm:gap-[30px]">
+                <div className="hidden md:mx-auto md:flex md:gap-[30px]">
                   <a
                     href="#"
                     className="inline-flex items-center text-xs font-normal"
@@ -49,12 +49,12 @@ export default function NavBar() {
                   </a>
                 </div>
               </div>
-              <div className="hidden sm:flex items-center">
-                <button className='rounded-full border border-secondary text-secondary bg-secondary/10 px-[24px] py-[13px] text-sm font-medium leading-none'>
+              <div className="hidden md:flex items-center">
+                <button className='rounded-full border border-secondary text-secondary bg-secondary/10 px-[24px] py-[13px] text-md font-medium leading-none'>
                   Contact
                 </button>
               </div>
-              <div className="flex items-center sm:hidden">
+              <div className="flex items-center md:hidden">
                 {/* Mobile menu button */}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                   <span className="sr-only">Open main menu</span>
@@ -68,7 +68,7 @@ export default function NavBar() {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="md:hidden">
             <div className="space-y-1 pb-4 pt-2">
               <Disclosure.Button
                 as="a"
