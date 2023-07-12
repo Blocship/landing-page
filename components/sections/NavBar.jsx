@@ -38,7 +38,7 @@ export default function NavBar() {
   
   return (
     <Disclosure as="nav">
-      {({ open }) => (
+      {({ open, close }) => (
         <>
           <div className="-mx-5 px-5 md:px-0 md:mx-auto w-screen md:w-full bg-white md:bg-transparent shadow-sm md:shadow-none max-w-[1212px] h-[72px] md:h-[100px] flex items-center">
             <div className="relative flex h-16 justify-between w-full">
@@ -98,7 +98,7 @@ export default function NavBar() {
               </button>
             </div>
           </Disclosure.Panel>
-          <div className={`${open ? 'block' : 'hidden'} left-0 absolute h-full backdrop-blur-sm w-full z-10`}></div>
+          <div onClick={() => close()} className={`${open ? 'block' : 'hidden'} left-0 absolute h-full backdrop-blur-sm w-full z-10`}></div>
         </>
       )}
     </Disclosure>
