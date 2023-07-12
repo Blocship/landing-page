@@ -9,13 +9,13 @@ import NavBar from './NavBar';
 
 export default function HeroArea() {
   return (
-    <div id='hero-area' className='flex flex-col gap-24 px-5 bg-opacity-10 bg-gradient-to-t from-light-gradient/5 to-dark-gradient/5'>
+    <div id='hero-area' className='flex flex-col gap-[92px] md:gap-24 px-5 bg-opacity-10 bg-gradient-to-t from-light-gradient/5 to-dark-gradient/5'>
       
       <NavBar/>
       
       <div className='flex flex-col items-center gap-10 lg:gap-8'>
         <div className='flex flex-col gap-4 md:gap-6 lg:gap-5'>
-          <HeroHeading className='mt-12'>
+          <HeroHeading className='-mt-[40px] md:mt-0 lg:mt-12'>
             We <Image className='inline w-[27px] md:w-[42px] lg:w-[54px]' src={HeroBlock} alt="build" /> <strong>Flutter Centric</strong> Mobile Apps That Engage & Convert Users.
           </HeroHeading>
           
