@@ -98,7 +98,10 @@ export default function NavBar() {
               </button>
             </div>
           </Disclosure.Panel>
-          <div onClick={() => close()} className={`${open ? 'block' : 'hidden'} left-0 absolute h-full backdrop-blur-sm w-full z-10`}></div>
+          <div onClick={() => {
+            close()
+            enableBodyScroll()
+          }} className={`${open ? 'block' : 'hidden'} left-0 absolute h-full backdrop-blur-sm w-full z-10`}></div>
         </>
       )}
     </Disclosure>
