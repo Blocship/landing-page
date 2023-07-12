@@ -8,13 +8,37 @@ function classNames(...classes) {
 }
 
 export default function NavBar() {
+  
+  const NAVIGATION = [
+    {
+      id: 0,
+      title: `Home`,
+      link: '#'
+    },
+    {
+      id: 1,
+      title: `Solutions`,
+      link: '#'
+    },
+    {
+      id: 2,
+      title: `Our Work`,
+      link: '#'
+    },
+    {
+      id: 3,
+      title: `About`,
+      link: '#'
+    }
+  ];
+  
   return (
     <Disclosure as="nav">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-[1212px] h-[72px] md:h-[100px] flex items-center w-full">
+          <div className="-mx-5 px-5 md:px-0 md:mx-auto w-screen md:w-full max-w-[1212px] h-[72px] md:h-[100px] flex items-center">
             <div className="relative flex h-16 justify-between w-full">
-              <div className="flex flex-1 items-center md:items-stretch">
+              <div className="flex flex-1 items-center md:items-stretch" >
                 <div className="flex flex-shrink-0 items-center">
                   <Image
                     className="block w-[120px] md:w-[144px] h-auto"
@@ -23,30 +47,11 @@ export default function NavBar() {
                   />
                 </div>
                 <div className="hidden md:mx-auto md:flex md:gap-[30px]">
-                  <a
-                    href="#"
-                    className="inline-flex items-center text-xs font-normal"
-                  >
-                    Home
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center text-xs font-normal"
-                  >
-                    Solutions
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center text-xs font-normal"
-                  >
-                    Our Work
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center text-xs font-normal"
-                  >
-                    About
-                  </a>
+                  {
+                    NAVIGATION.map(({id, title, link}) => {
+                      return <a href={link} key={id} className="inline-flex items-center text-xs font-normal" >{title}</a>;
+                    })
+                  }
                 </div>
               </div>
               <div className="hidden md:flex items-center">
@@ -70,34 +75,20 @@ export default function NavBar() {
 
           <Disclosure.Panel className="md:hidden">
             <div className="space-y-1 pb-4 pt-2">
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-              >
-                Home
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-              >
-                Solutions
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-              >
-                Our Work
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700"
-              >
-                About
-              </Disclosure.Button>
+              {
+                NAVIGATION.map(({id, title, link}) => {
+                  return (
+                    <Disclosure.Button
+                      key={id}
+                      as="a"
+                      href={link}
+                      className="block py-2 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+                    >
+                      {title}
+                    </Disclosure.Button>
+                  );
+                })
+              }
             </div>
           </Disclosure.Panel>
         </>
